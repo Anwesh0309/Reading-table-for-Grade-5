@@ -65,7 +65,7 @@ const StoryCarousel = ({ onComplete }) => {
   const slide = storySlides[currentSlide];
 
   return (
-    <div className="w-full h-full max-w-4xl flex flex-col justify-center min-h-0 py-2 md:py-4">
+    <div className="w-full h-full max-w-4xl flex flex-col justify-center min-h-0 py-2">
       {/* Top Progress Bar */}
       <div className="flex items-center justify-between mb-2 md:mb-4 shrink-0">
         <div className="flex-1 bg-white/10 h-1 rounded-full overflow-hidden">
@@ -82,7 +82,7 @@ const StoryCarousel = ({ onComplete }) => {
       </div>
 
       {/* Main Card */}
-      <div className="bg-[var(--color-card-bg)] border border-[var(--color-card-border)] rounded-[32px] p-4 md:p-6 shadow-2xl relative overflow-hidden flex flex-col md:flex-row flex-1 min-h-0">
+      <div className="bg-[var(--color-card-bg)] border border-[var(--color-card-border)] rounded-[32px] p-2 md:p-4 shadow-2xl relative overflow-hidden flex flex-col md:flex-row flex-1 min-h-0">
         
         {/* Left Side: Illustration / Interactive area */}
         <div className="md:w-1/2 flex flex-col items-center justify-center p-0 bg-[#150c2e] rounded-2xl border border-white/5 relative overflow-hidden">
@@ -139,7 +139,7 @@ const StoryCarousel = ({ onComplete }) => {
             </motion.div>
           </AnimatePresence>
           
-          <div className="flex items-center space-x-4 mt-2 md:mt-4 shrink-0 w-full max-w-sm mx-auto">
+          <div className="flex items-center space-x-2 md:space-x-4 mt-2 shrink-0 w-full max-w-sm mx-auto">
             <div className="w-12 h-12 bg-gradient-to-b from-[var(--color-accent-gold)] to-[var(--color-accent-orange)] rounded-full flex items-center justify-center text-2xl shadow-lg border-2 border-[#150c2e] shrink-0 z-10">
               🦁
             </div>
@@ -152,7 +152,7 @@ const StoryCarousel = ({ onComplete }) => {
       </div>
 
       {/* Navigation Buttons */}
-      <div className="flex items-center justify-between mt-4 md:mt-8 w-full shrink-0">
+      <div className="flex items-center justify-between mt-2 md:mt-4 w-full shrink-0">
         <button 
           onClick={handlePrev}
           disabled={currentSlide === 0}
@@ -169,7 +169,7 @@ const StoryCarousel = ({ onComplete }) => {
 
         <button 
           onClick={handleNext}
-          className="px-8 py-3 bg-[var(--color-accent-gold)] hover:bg-[#e0941d] text-[#2a1a4a] rounded-full font-black shadow-[0_0_15px_rgba(245,166,35,0.3)] transition-transform hover:scale-105"
+          className="px-6 py-2 md:px-8 md:py-3 bg-[var(--color-accent-gold)] hover:bg-[#e0941d] text-[#2a1a4a] rounded-full font-black shadow-[0_0_15px_rgba(245,166,35,0.3)] transition-transform hover:scale-105"
         >
           {currentSlide === storySlides.length - 1 ? 'Simulate 🧪' : 'Next \u2192'}
         </button>

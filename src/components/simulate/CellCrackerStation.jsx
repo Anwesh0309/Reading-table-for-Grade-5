@@ -34,14 +34,14 @@ const CellCrackerStation = () => {
   const selectedValue = data[rowIndex][cols[colIndex]];
 
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full p-4">
-      <h3 className="text-xl font-bold mb-4 flex items-center">
+    <div className="flex flex-col items-center justify-center w-full h-full p-2">
+      <h3 className="text-xl font-bold mb-2 flex items-center shrink-0">
         <span className="bg-white/20 p-1.5 rounded-md mr-2">⚡</span> Cell Cracker
       </h3>
 
-      <div className="flex flex-col md:flex-row w-full max-w-4xl space-y-6 md:space-y-0 md:space-x-8">
+      <div className="flex flex-col md:flex-row w-full max-w-4xl space-y-2 md:space-y-0 md:space-x-4 flex-1 min-h-0">
         {/* Table View */}
-        <div className="md:w-1/2 bg-[#150c2e] rounded-xl border border-white/10 overflow-hidden shadow-inner">
+        <div className="md:w-1/2 bg-[#150c2e] rounded-xl border border-white/10 overflow-hidden shadow-inner flex flex-col justify-center">
           <table className="w-full text-center text-sm table-fixed">
             <thead className="bg-[#2a1a4a]/50 text-xs text-[var(--color-text-muted)] uppercase tracking-wider">
               <tr>
@@ -83,11 +83,11 @@ const CellCrackerStation = () => {
         </div>
 
         {/* Controls View */}
-        <div className="md:w-1/2 flex flex-col justify-center bg-black/20 p-6 rounded-2xl border border-white/10">
+        <div className="md:w-1/2 flex flex-col justify-center bg-black/20 p-4 rounded-2xl border border-white/10 shrink-0">
           
-          <div className="mb-6">
-            <label className="block text-sm font-bold text-[var(--color-text-muted)] mb-2 uppercase tracking-wide">
-              Row Index: <span className="text-white text-lg">{rowIndex + 1}</span>
+          <div className="mb-4">
+            <label className="block text-xs font-bold text-[var(--color-text-muted)] mb-1 uppercase tracking-wide">
+              Row Index: <span className="text-white text-base">{rowIndex + 1}</span>
             </label>
             <input 
               type="range" 
@@ -99,9 +99,9 @@ const CellCrackerStation = () => {
             />
           </div>
 
-          <div className="mb-8">
-            <label className="block text-sm font-bold text-[var(--color-text-muted)] mb-2 uppercase tracking-wide">
-              Column Index: <span className="text-white text-lg">{colLabels[colIndex]}</span>
+          <div className="mb-4">
+            <label className="block text-xs font-bold text-[var(--color-text-muted)] mb-1 uppercase tracking-wide">
+              Column Index: <span className="text-white text-base">{colLabels[colIndex]}</span>
             </label>
             <input 
               type="range" 
@@ -113,17 +113,17 @@ const CellCrackerStation = () => {
             />
           </div>
 
-          <div className="bg-[#150c2e] rounded-xl border border-[var(--color-accent-gold)]/50 p-4 shadow-[0_0_15px_rgba(245,166,35,0.2)] text-center">
-            <p className="text-sm text-[var(--color-text-muted)] mb-1 font-bold">Intersection Formula</p>
-            <p className="text-xl font-black text-white">
+          <div className="bg-[#150c2e] rounded-xl border border-[var(--color-accent-gold)]/50 p-2 shadow-[0_0_15px_rgba(245,166,35,0.2)] text-center mb-2">
+            <p className="text-xs text-[var(--color-text-muted)] mb-1 font-bold">Intersection Formula</p>
+            <p className="text-lg font-black text-white">
               Row {rowIndex + 1} <span className="text-[var(--color-accent-gold)]">×</span> {colLabels[colIndex]} <span className="text-[var(--color-accent-gold)]">=</span> {selectedValue}
             </p>
           </div>
 
-          <div className="mt-6 flex justify-center">
+          <div className="flex justify-center mt-2">
             <button 
               onClick={() => { setRowIndex(0); setColIndex(0); setResetKey(k => k + 1); }}
-              className="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-full font-semibold text-sm transition-colors"
+              className="px-4 py-1.5 bg-white/10 hover:bg-white/20 rounded-full font-semibold text-xs transition-colors"
             >
               New Table (Reset)
             </button>

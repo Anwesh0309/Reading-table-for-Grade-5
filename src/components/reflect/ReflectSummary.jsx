@@ -51,7 +51,7 @@ const ReflectSummary = () => {
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ type: "spring", bounce: 0.5 }}
-        className="w-20 h-20 md:w-28 md:h-28 bg-gradient-to-br from-[var(--color-accent-gold)] to-[var(--color-accent-orange)] rounded-full flex items-center justify-center text-4xl md:text-6xl shadow-[0_0_50px_rgba(245,166,35,0.6)] mb-4 z-10 shrink-0"
+        className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-[var(--color-accent-gold)] to-[var(--color-accent-orange)] rounded-full flex items-center justify-center text-3xl md:text-5xl shadow-[0_0_50px_rgba(245,166,35,0.6)] mb-2 z-10 shrink-0"
       >
         🏆
       </motion.div>
@@ -59,17 +59,17 @@ const ReflectSummary = () => {
       <motion.h1 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-2xl md:text-4xl font-black text-center mb-4 shrink-0"
+        className="text-xl md:text-3xl font-black text-center mb-2 shrink-0"
       >
         Journey <span className="text-[var(--color-accent-gold)]">Complete!</span>
       </motion.h1>
 
-      <div className="bg-[var(--color-card-bg)] border border-[var(--color-card-border)] rounded-[32px] p-6 shadow-2xl w-full flex flex-col md:flex-row items-center relative overflow-hidden mb-4 shrink-0">
+      <div className="bg-[var(--color-card-bg)] border border-[var(--color-card-border)] rounded-[32px] p-4 shadow-2xl w-full flex flex-col md:flex-row items-center relative overflow-hidden mb-2 shrink-0 flex-1 min-h-0 justify-center">
         
         {/* Left: Ring Chart & Rating */}
-        <div className="md:w-1/3 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-white/10 pb-4 md:pb-0 md:pr-4">
+        <div className="md:w-1/3 flex flex-col items-center justify-center border-b md:border-b-0 md:border-r border-white/10 pb-2 md:pb-0 md:pr-4">
           
-          <div className="relative w-28 h-28 md:w-36 md:h-36 flex items-center justify-center mb-4">
+          <div className="relative w-24 h-24 md:w-32 md:h-32 flex items-center justify-center mb-2">
             <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
               <circle cx="50" cy="50" r="40" stroke="rgba(255,255,255,0.1)" strokeWidth="12" fill="none" />
               <motion.circle 
@@ -123,10 +123,10 @@ const ReflectSummary = () => {
 
       </div>
 
-      <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 shrink-0 mt-auto">
+      <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 shrink-0 mt-auto">
         <button 
           onClick={handlePlayAgain}
-          className="bg-[var(--color-accent-gold)] hover:bg-[#e0941d] text-[#2a1a4a] font-black text-base md:text-lg px-8 py-3 rounded-full flex items-center space-x-3 transition-transform hover:scale-105 shadow-[0_0_20px_rgba(245,166,35,0.4)]"
+          className="bg-[var(--color-accent-gold)] hover:bg-[#e0941d] text-[#2a1a4a] font-black text-sm md:text-base px-6 py-2 rounded-full flex items-center space-x-3 transition-transform hover:scale-105 shadow-[0_0_20px_rgba(245,166,35,0.4)]"
         >
           <span>🔄 Play Again</span>
         </button>

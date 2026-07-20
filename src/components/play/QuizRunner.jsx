@@ -51,7 +51,7 @@ const QuizRunner = ({ world, questions, onComplete }) => {
     <div className="flex flex-col items-center w-full max-w-4xl mx-auto h-full p-2 md:p-4 min-h-0">
       
       {/* Header Stats */}
-      <div className="flex items-center justify-between w-full mb-6 bg-black/20 p-4 rounded-3xl border border-white/10">
+      <div className="flex items-center justify-between w-full mb-2 bg-black/20 p-2 md:p-4 rounded-3xl border border-white/10 shrink-0">
         <div className="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-full">
           <span>{world.icon}</span>
           <span className="font-bold">{world.name}</span>
@@ -70,7 +70,7 @@ const QuizRunner = ({ world, questions, onComplete }) => {
       </div>
 
       {/* Progress Bar */}
-      <div className="w-full h-2 bg-white/10 rounded-full mb-8 overflow-hidden">
+      <div className="w-full h-2 bg-white/10 rounded-full mb-2 md:mb-4 overflow-hidden shrink-0">
         <motion.div 
           className="h-full bg-[var(--color-accent-gold)]"
           initial={{ width: `${(currentQIndex / questions.length) * 100}%` }}
@@ -79,11 +79,11 @@ const QuizRunner = ({ world, questions, onComplete }) => {
       </div>
 
       {/* Question Card */}
-      <div className="bg-[var(--color-card-bg)] border border-[var(--color-card-border)] rounded-[32px] p-4 md:p-8 w-full shadow-2xl flex flex-col flex-1 min-h-0 items-center relative overflow-hidden mb-4">
-        <h2 className="text-xl md:text-3xl font-black text-center mb-4 shrink-0">{question.questionText}</h2>
+      <div className="bg-[var(--color-card-bg)] border border-[var(--color-card-border)] rounded-[32px] p-2 md:p-6 w-full shadow-2xl flex flex-col flex-1 min-h-0 items-center relative overflow-hidden mb-2">
+        <h2 className="text-lg md:text-2xl font-black text-center mb-2 shrink-0">{question.questionText}</h2>
         
         {/* Table */}
-        <div className="bg-[#150c2e] rounded-xl border border-white/10 overflow-hidden w-full max-w-lg shadow-inner mb-6 shrink-0">
+        <div className="bg-[#150c2e] rounded-xl border border-white/10 overflow-hidden w-full max-w-lg shadow-inner mb-2 shrink-0">
           <table className="w-full text-center text-xs md:text-sm">
             <thead className="bg-[#2a1a4a]/50 text-xs text-[var(--color-text-muted)] uppercase tracking-wider">
               <tr>
@@ -138,13 +138,13 @@ const QuizRunner = ({ world, questions, onComplete }) => {
         </AnimatePresence>
 
         {/* Answer Grid */}
-        <div className="grid grid-cols-2 gap-2 md:gap-4 w-full flex-1">
+        <div className="grid grid-cols-2 gap-2 md:gap-4 w-full flex-1 min-h-0 overflow-y-auto mt-2">
           {question.options.map((opt, idx) => (
             <button
               key={idx}
               onClick={() => handleAnswer(idx)}
               disabled={feedback !== null}
-              className="bg-[#2a1a4a] hover:bg-[#412759] border-2 border-white/10 text-white font-black text-lg md:text-xl py-2 md:py-6 rounded-2xl transition-all hover:scale-[1.02] active:scale-95 shadow-lg flex items-center justify-center min-h-[60px]"
+              className="bg-[#2a1a4a] hover:bg-[#412759] border-2 border-white/10 text-white font-black text-base md:text-xl py-2 md:py-4 rounded-2xl transition-all hover:scale-[1.02] active:scale-95 shadow-lg flex items-center justify-center min-h-[48px] md:min-h-[60px]"
             >
               {opt}
             </button>
