@@ -5,7 +5,7 @@ import IntroModal from './pages/IntroModal';
 import Wonder from './pages/Wonder';
 import Story from './pages/Story';
 import Simulate from './pages/Simulate';
-import Play from './pages/Play';
+import Practice from './pages/Practice';
 import Reflect from './pages/Reflect';
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
           <Route path="/wonder" element={<Wonder />} />
           <Route path="/story" element={<Story />} />
           <Route path="/simulate" element={<Simulate />} />
-          <Route path="/play" element={<Play />} />
+          <Route path="/practice" element={<Practice />} />
           <Route path="/reflect" element={<Reflect />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

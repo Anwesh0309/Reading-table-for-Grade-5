@@ -98,10 +98,10 @@ const Simulate = () => {
             </button>
           ) : (
             <button 
-              onClick={() => navigate('/play')}
+              onClick={() => navigate('/practice')}
               className="px-8 py-3 bg-[var(--color-accent-gold)] hover:bg-[#e0941d] text-[#2a1a4a] rounded-full font-black shadow-[0_0_15px_rgba(245,166,35,0.3)] transition-transform hover:scale-105"
             >
-              Play Phase 🎮
+              Practice Phase 🎮
             </button>
           )}
         </div>

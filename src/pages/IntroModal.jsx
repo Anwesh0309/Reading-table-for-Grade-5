@@ -94,7 +94,7 @@ const IntroModal = () => {
             <div className="flex items-center space-x-3 w-32">
               <div className="w-10 h-10 rounded-full bg-[#3a256a] flex items-center justify-center text-xl shrink-0">🎮</div>
               <div className="flex flex-col text-left">
-                <span className="font-bold text-xs text-white">Play</span>
+                <span className="font-bold text-xs text-white">Practice</span>
                 <span className="text-[9px] text-white/50 leading-tight">100 challenges</span>
               </div>
             </div>

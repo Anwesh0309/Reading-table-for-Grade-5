@@ -7,7 +7,7 @@ const phases = [
   { id: 'wonder', num: '01', label: 'Wonder', path: '/wonder' },
   { id: 'story', num: '02', label: 'Story', path: '/story' },
   { id: 'simulate', num: '03', label: 'Simulate', path: '/simulate' },
-  { id: 'play', num: '04', label: 'Play', path: '/play' },
+  { id: 'practice', num: '04', label: 'Practice', path: '/practice' },
   { id: 'reflect', num: '05', label: 'Reflect', path: '/reflect' },
 ];
 

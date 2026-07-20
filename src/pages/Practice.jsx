@@ -8,7 +8,7 @@ import useProgressStore from '../engine/progressStore';
 import { generateQuestionsForWorld } from '../engine/questionEngine';
 import { playAudio, stopNarration } from '../utils/audio';
 
-const Play = () => {
+const Practice = () => {
   const navigate = useNavigate();
   const [activeWorld, setActiveWorld] = useState(null); // holds world object when playing
   const [worldQuestions, setWorldQuestions] = useState([]);
@@ -73,7 +73,7 @@ const Play = () => {
             <div className="flex flex-col items-center mb-4 shrink-0">
               <div className="flex items-center justify-center space-x-2 text-white/90 mb-1">
                 <span className="text-xl">🎮</span>
-                <h2 className="text-xl md:text-2xl font-bold">Play — Choose Your World!</h2>
+                <h2 className="text-xl md:text-2xl font-bold">Practice — Choose Your World!</h2>
               </div>
               <p className="text-[10px] md:text-xs text-white/50 mb-2">
                 Answer questions in each world. Earn stars and XP!
@@ -107,7 +107,7 @@ const Play = () => {
                         onClick={() => startWorld(world, idx)}
                         className="bg-[#ff2a5f] hover:bg-[#ff4d79] text-white text-[10px] md:text-xs font-bold px-6 py-1.5 md:px-8 md:py-2 rounded-full tracking-wider transition-transform hover:scale-105 active:scale-95 shadow-lg mt-auto w-full max-w-[120px]"
                       >
-                        ▶ PLAY
+                        ▶ PRACTICE
                       </button>
                     )}
                   </div>
@@ -153,4 +153,4 @@ const Play = () => {
   );
 };
 
-export default Play;
+export default Practice;
