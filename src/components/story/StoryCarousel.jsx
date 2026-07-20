@@ -26,8 +26,7 @@ const storySlides = [
     text: "Which day has the highest temperature and no rain?",
     highlightText: "\"Highest temp & no rain?\"",
     mascotText: "Let's check the columns! 🔍",
-    img: "/assets/img/slide3.png",
-    showTable: true
+    img: "/assets/img/slide3.png"
   },
   {
     id: 4,
@@ -88,31 +87,7 @@ const StoryCarousel = ({ onComplete }) => {
         <div className="md:w-1/2 flex flex-col items-center justify-center p-0 bg-[#150c2e] rounded-2xl border border-white/5 relative overflow-hidden">
           <img src={slide.img} alt={slide.title} className="absolute inset-0 w-full h-full object-cover opacity-80" />
           
-          {slide.showTable && (
-            <div className="bg-[#150c2e]/80 backdrop-blur-md rounded-xl border border-white/10 overflow-hidden w-full max-w-[200px] shadow-2xl mt-4 relative z-10 scale-90">
-              <table className="w-full text-center text-sm">
-                <thead className="bg-[#2a1a4a]/50 text-[10px] text-[var(--color-text-muted)] uppercase tracking-wider">
-                  <tr>
-                    <th className="py-2 px-2 border-b border-white/10">Day</th>
-                    <th className="py-2 px-2 border-b border-white/10">Temp</th>
-                    <th className="py-2 px-2 border-b border-white/10">Rain</th>
-                  </tr>
-                </thead>
-                <tbody className="font-bold">
-                  <tr>
-                    <td className="py-2 px-2 border-b border-white/5">Sat</td>
-                    <td className="py-2 px-2 border-b border-white/5 text-[var(--color-accent-gold)]">32°C</td>
-                    <td className="py-2 px-2 border-b border-white/5 text-[var(--color-danger)]">Yes</td>
-                  </tr>
-                  <tr className="bg-white/5">
-                    <td className="py-2 px-2 border-b border-white/5">Sun</td>
-                    <td className="py-2 px-2 border-b border-white/5 text-[var(--color-success)]">34°C</td>
-                    <td className="py-2 px-2 border-b border-white/5">No</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          )}
+
         </div>
 
         {/* Right Side: Text & Controls */}
