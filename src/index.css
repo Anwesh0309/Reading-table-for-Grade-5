@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent-gold: #f5a623;
+  --color-accent-orange: #ff7a3d;
+  --color-card-bg: rgba(255, 255, 255, 0.05);
+  --color-card-border: rgba(255, 255, 255, 0.12);
+  --color-text-primary: #ffffff;
+  --color-text-muted: #b8aed6;
+  --color-success: #34d399;
+  --color-danger: #f87171;
+  --font-display: "Baloo 2", "Poppins", sans-serif;
+}
+
+@layer base {
+  :root {
+    --bg-gradient: radial-gradient(circle at top, #3a2266, #211340 70%, #170d30);
+    --radius-lg: 24px;
+    --font-weight-black: 800;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100dvh;
+    background: var(--bg-gradient);
+    color: var(--color-text-primary);
+    font-family: var(--font-display);
+    overflow: hidden;
+  }
+}
