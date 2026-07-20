@@ -26,6 +26,8 @@
     background: var(--bg-gradient);
     color: var(--color-text-primary);
     font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.125rem;
     overflow: hidden;
   }
 }

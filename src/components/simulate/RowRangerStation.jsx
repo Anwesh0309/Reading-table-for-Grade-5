@@ -25,9 +25,15 @@ const RowRangerStation = () => {
 
   return (
     <div className="flex flex-col items-center justify-center w-full h-full p-2">
-      <h3 className="text-xl font-bold mb-2 flex items-center shrink-0">
-        <span className="bg-white/20 p-1.5 rounded-md mr-2">📏</span> Row Ranger
-      </h3>
+      <div className="flex flex-col items-center mb-2 shrink-0 text-center">
+        <span className="text-[var(--color-accent-gold)] font-black uppercase text-sm md:text-base tracking-widest mb-1 drop-shadow-md">Simulation A</span>
+        <h3 className="text-2xl md:text-3xl font-black flex items-center mb-1 drop-shadow-lg text-white">
+          <span className="bg-white/20 p-2 rounded-lg mr-3 shadow-inner">📏</span> Row Ranger
+        </h3>
+        <p className="text-white font-extrabold text-sm md:text-base bg-[#241646] px-5 py-2 rounded-full border-2 border-[var(--color-accent-gold)]/50 shadow-inner mt-1">
+          Click on any <span className="text-[var(--color-accent-gold)] text-lg uppercase tracking-wide">Row</span> to see the Data
+        </p>
+      </div>
       
       <div className="w-full max-w-lg bg-[#150c2e] rounded-xl border border-white/10 overflow-hidden shadow-inner mb-2 shrink-0">
         <table className="w-full text-center text-lg">

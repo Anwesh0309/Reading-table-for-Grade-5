@@ -35,9 +35,15 @@ const CellCrackerStation = () => {
 
   return (
     <div className="flex flex-col items-center justify-center w-full h-full p-2">
-      <h3 className="text-xl font-bold mb-2 flex items-center shrink-0">
-        <span className="bg-white/20 p-1.5 rounded-md mr-2">⚡</span> Cell Cracker
-      </h3>
+      <div className="flex flex-col items-center mb-2 shrink-0 text-center">
+        <span className="text-[var(--color-accent-gold)] font-black uppercase text-sm md:text-base tracking-widest mb-1 drop-shadow-md">Simulation C</span>
+        <h3 className="text-2xl md:text-3xl font-black flex items-center mb-1 drop-shadow-lg text-white">
+          <span className="bg-white/20 p-2 rounded-lg mr-3 shadow-inner">⚡</span> Cell Cracker
+        </h3>
+        <p className="text-white font-extrabold text-sm md:text-base bg-[#241646] px-5 py-2 rounded-full border-2 border-[var(--color-accent-gold)]/50 shadow-inner mt-1">
+          Drag the <span className="text-[var(--color-accent-gold)] text-lg uppercase tracking-wide">lines</span> to see the exact Data
+        </p>
+      </div>
 
       <div className="flex flex-col md:flex-row w-full max-w-4xl space-y-2 md:space-y-0 md:space-x-4 flex-1 min-h-0">
         {/* Table View */}
